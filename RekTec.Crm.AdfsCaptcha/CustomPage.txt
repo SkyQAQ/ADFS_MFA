@@ -1,0 +1,19 @@
+﻿<div class="loginArea">
+	<form method="post" id="loginForm">
+		<!-- 必要的，不能删除 -->
+		<input id="authMethod" type="hidden" name="AuthMethod" value="%AuthMethod%"/>
+		<input id="context" type="hidden" name="Context" value="%Context%"/>
+		<div class="groupMargin">
+			<h1>MFA二次验证</h1>
+			<p>$phoneMssg$</p>
+		</div>
+		<div class="groupMargin">
+			<label for="captcha" class="block">手机验证码</label>
+			<input type="text" id="captcha" name="captcha" placeholder="请输入验证码" class="fullWidth" />
+			<p class="error">$errorMssg$</p>
+		</div>
+		<div class="submitMargin">
+			<input type="submit" id="verify" name="Verify" value="验证" onclick="return AuthPage.submitAnswer()" />
+		</div>
+	</form>
+</div>
